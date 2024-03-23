@@ -354,6 +354,31 @@ body {
 .card h3 {
   margin-bottom: 25px;
 }
+.card .alert {
+  display: flex;
+  align-items: center;
+}
+.card .alert.two:after {
+  content: "2";
+}
+.card .alert.four:after {
+  content: "4";
+}
+.card .alert::after {
+  margin-left: 5px;
+  content: "1";
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  background-color: #e1251b;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .card a {
   padding: 0 10px;
   border-top: 1px solid #dadada;
