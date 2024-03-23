@@ -89,10 +89,14 @@ p {
   cursor: pointer;
   display: block;
   text-align: center;
+  transition: all 0.3s ease;
 }
 .btn:hover {
-  background: darken;
+  background: #000000;
   transition: all 0.3s ease;
+}
+.btn a {
+  color: #ffffff;
 }
 
 a {
@@ -233,7 +237,7 @@ body {
 }
 
 .navbar__cont {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -249,15 +253,29 @@ body {
   width: 50%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .navbar__cont .input-wrapper {
+    width: 77.7777777778%;
+  }
 }
 .navbar__cont .input-wrapper img {
   position: absolute;
-  left: 5px;
-  top: 12px;
+  left: 10px;
+  top: 0;
   z-index: 1;
+  bottom: 0;
+  margin: auto;
+}
+.navbar__cont .input-wrapper .searchBar {
+  width: 94.4444444444%;
+  margin-right: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  padding-left: 35px;
 }
 .navbar__cont .input-wrapper input {
-  padding: 12px 5px 12px 25px;
   font-size: 14px;
   height: 48px;
 }
@@ -291,24 +309,25 @@ body {
 
 .card {
   background-color: #F4F4F5;
-  padding: 30px;
+  padding: 25px;
   border-radius: 10px;
 }
 .card h3 {
   margin-bottom: 25px;
 }
-.card p {
-  padding: 15px 0;
+.card a {
+  padding: 0 10px;
   border-top: 1px solid #dadada;
   margin-bottom: 0;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.card p:first-of-type {
+.card a:first-of-type {
   border-top: none;
 }
-.card p::after {
+.card a::after {
   content: "";
   background-image: url(arrow-right.svg);
   background-repeat: no-repeat;
@@ -318,8 +337,17 @@ body {
   fill: red;
   padding: 10px 10px;
 }
-.card p.no-arrow:after {
+.card a.no-arrow:after {
   display: none;
+}
+.card a:hover {
+  background-color: #dadada;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+.card p {
+  padding: 15px 0;
+  margin-bottom: 0;
 }
 
 .accordion {
