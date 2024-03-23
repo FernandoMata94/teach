@@ -135,6 +135,45 @@ body {
 .sidemenu.active {
   right: 0;
 }
+.sidemenu .close {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .sidemenu .close {
+    display: block;
+  }
+}
+.sidemenu .close span {
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 5px;
+}
+.sidemenu .close span:first-of-type {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sidemenu .close span:last-of-type {
+  transform: rotate(136deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
 @media screen and (max-width: 768px) {
   .sidemenu {
     position: fixed;

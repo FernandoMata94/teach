@@ -177,6 +177,43 @@ body {
     &.active{
         right: 0;
     }
+    .close{
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        display: none;
+        @media screen and (max-width: $sm) {
+            display: block;
+        }
+        span{
+            width: 100%;
+            height: 4px;
+            background-color: $white;
+            display: block;
+            border-radius: 5px;
+            &:first-of-type{
+                transform: rotate(45deg);
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            &:last-of-type{
+                transform: rotate(136deg);
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
     @media screen and (max-width: $sm) {
         position: fixed;
         right: -200px;

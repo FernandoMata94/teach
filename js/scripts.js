@@ -20,3 +20,7 @@ for (i = 0; i < acc.length; i++) {
 $('.burguer').click(function(){
     $('.sidemenu').addClass("active");
 });
+
+$('.close').click(function(){
+  $('.sidemenu').removeClass("active");
+});
