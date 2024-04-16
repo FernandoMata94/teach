@@ -414,16 +414,105 @@ body {
   margin-bottom: 0;
 }
 
-.accordion {
+.homepage-grid h2 {
+  margin-bottom: 25px;
+}
+
+.greyBg {
   background-color: #F4F4F5;
-  padding: 30px;
+  padding: 25px;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px;
+}
+@media screen and (max-width: 1200px) {
+  .greyBg {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 850px) {
+  .greyBg {
+    grid-template-columns: 1fr;
+  }
+}
+.greyBg .column {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.greyBg .column .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+.greyBg .column .item:nth-of-type(1) {
+  padding: 0 0 25px 0;
+}
+.greyBg .column .item:nth-of-type(2) {
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+.greyBg .column .item:nth-of-type(3) {
+  padding: 25px 0 0 0;
+}
+.greyBg h3 {
+  margin-bottom: 0;
+}
+.greyBg p {
+  margin-bottom: 34px;
+}
+.greyBg .btn {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  font-weight: 200;
+}
+.greyBg .btn img {
+  margin-left: 5px;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(669%) hue-rotate(108deg) brightness(119%) contrast(100%);
+  width: 20px;
+}
+.greyBg p {
+  padding: 15px 0;
+  margin-bottom: 0;
+}
+
+.accordion .title-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion .plus-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.accordion .plus-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #1A1A1A;
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.accordion .plus-icon span:nth-of-type(1) {
+  left: 0;
+}
+.accordion .plus-icon span:nth-of-type(2) {
+  transform: rotate(90deg);
+  left: 0;
 }
 .accordion .acc-item {
-  padding: 15px 0;
+  padding: 30px;
   border-top: 1px solid #dadada;
   margin-bottom: 0;
-  height: 80px;
+  height: 110px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -432,29 +521,17 @@ body {
   border-top: none;
 }
 .accordion .acc-item.active {
-  height: 170px;
+  border-radius: 10px;
+  height: auto;
   transition: all 0.3s ease;
+  background-color: #F4F4F5;
 }
-.accordion .acc-item.active h3::after {
-  transform: rotate(180deg);
+.accordion .acc-item.active .plus-icon span:nth-of-type(2) {
+  transform: rotate(0);
   transition: all 0.3s ease;
 }
 .accordion h3 {
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.accordion h3::after {
-  content: "";
-  background-image: url(chevron-down.svg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 22px;
-  height: 22px;
-  fill: red;
-  padding: 10px 10px;
-  transition: all 0.3s ease;
+  margin-bottom: 45px;
 }
 
 .card-single {
